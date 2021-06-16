@@ -1,0 +1,43 @@
+header{
+    background:var(--color-purple) ;
+    height:4rem;
+    color:var (--color-yellow);
+    font-size: 1.4rem;
+    position:sticky;
+    left:0;
+    top:0;
+    z-index: 1060;
+    padding :0.5rem
+}
+a, a:link{
+    color:var(--color-yellow);
+    text-decoration:none;
+    transition: 0.3s color;
+}
+
+a:hover{
+    color:var(--color-pink);
+    text-decoration: none;
+    transition: 0.3s color;
+}
+.logo{
+    height:2.4rem;
+    width:2.4rem;
+    background-color: dimgray;
+    margin:0.3rem;
+    float:left;
+}
+.float-left{
+    float:left;
+}
+.float-right{
+    float:right;
+}
+i{
+    margin-left:2rem;
+    
+}
+span{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}

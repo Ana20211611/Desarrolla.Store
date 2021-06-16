@@ -1,0 +1,49 @@
+<main class ="container py-3">
+  <h1>Catalogo de Productos</h1>
+    <article class="row">
+    <section class="filtro col-2">
+        <h3>Filtros de búsqueda</h3>
+        <input type="checkbox" name="Filtro tal" id="Filtro1"> 
+        <label for="Filtro1">Filtro</label>
+    </section>
+    <section class="col-9 px-3">
+
+      <!-- template para una condición, porque no detecta una propiedad que aun no está-->
+      
+   
+<div *ngFor="let product of products"  class="card product-card ;"  >
+            <img [id]="'#img-' + product.sku" [src]="image" *ngFor="let image of product.images" >
+            <div class="card-body" >
+                <span>{{product.name}} - ${{product.price}}</span>
+                <hr>
+              <p class="card-text">{{product.description}}</p>
+              <button [attr.data-bs-target]="'#img-'" 
+              (click)= "AddToCart(product.sku)"   
+              class="btn  float-right" >+</button>
+            </div>
+          </div>
+
+         
+
+              
+              
+
+
+        
+    </section>
+</article>
+    
+    </main>
+    
+    <div class="toast align-items-center text-white border-0" role="alert" aria-live="assertive"
+  aria-atomic="true" data-bs-animation="true" data-bs-autohide="true" data-bs-delay="2000">
+  <div class="d-flex">
+    <div class="toast-body">
+      Se ha añadido el producto al carrito
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+      aria-label="Close"></button>
+    </div>
+  
+  
+  </div>
